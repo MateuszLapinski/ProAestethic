@@ -1,0 +1,35 @@
+.topBar{
+    background-color: white;
+    font-family: "Comfortaa", sans-serif !important;
+
+    font-size:20px;
+    font-weight:400;
+    color:black;
+}
+.navContainer{
+    height:100%;
+}
+.navbar{
+    background-color: white !important;
+}
+
+.logoImageContainer{
+    align-items: center;
+    justify-content: center;
+    padding-left:20px !important;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.logo{
+    width:200px;
+}
+.normalMenu{
+    background-color:white !important;
+    text-align: center;
+}
+.navLink{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+

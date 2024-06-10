@@ -1,13 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './CSS/index.css';
+import './CSS/Configurator.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './CSS/Layout.css';
+import './CSS/card.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Layout} from "./layout";
+import {Configurator} from "./Configurator";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <React.StrictMode>
+          <BrowserRouter>
+              <Routes>
+                  <Route path="/" element={<Layout />}>
+                      <Route index element={<App/>} />
+                  </Route>
+                  <Route path="/configurator" element={<Layout />}>
+                      <Route index element={<Configurator/>} />
+                  </Route>
+              </Routes>
+          </BrowserRouter>
+      </React.StrictMode>
   </React.StrictMode>
 );
 

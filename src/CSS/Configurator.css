@@ -1,0 +1,71 @@
+.rightSide,
+.leftSide{
+    z-index:2;
+
+}
+
+.rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-right: 10rem;
+
+}
+
+.leftSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 10rem;
+}
+
+.centralSide{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.firstStepHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px !important ;
+    margin-bottom: 40px;
+}
+
+
+.pageNumber{
+    position:absolute;
+    left: 0;
+    bottom:0;
+    z-index:-1;
+}
+
+.pageNumber img{
+    max-width:300px;
+}
+
+.carousel-indicators {
+    position:fixed !important;
+    bottom: 20px !important;
+    left: 35% !important;
+    transform: translateX(-50%);
+    z-index: 1000
+}
+.carousel-indicators button{
+   background-color:black !important;
+}
+
+
+@media (max-width:1024px) {
+    .rightSide{
+        margin-right: 1rem;
+    }
+    .leftSide{
+        margin-left: 1rem;
+
+    }
+}
