@@ -22,6 +22,22 @@
     text-align: center;
 }
 
+.estethicCard{
+    border:none !important;
+}
+.estethicCard:hover{
+    color: #450F93;
+    font-size: 30px;
+}
+
+.fingersCard.card{
+    border:none !important;
+}
+.phalanxCard{
+    border:none !important;
+}
+
+
 
 
 @media (max-width:1023px) {
@@ -29,49 +45,58 @@
         width: 10rem !important;
         border: lightgrey solid 20px;
     }
-    .card:hover{
+  /*  .card:hover{
 
         width: 15rem !important;
         border: #450F93 solid 10px;
-    }
-    .centralSide .card:hover{
-        border:none;
-    }
+    }*/
+
 }
 
 @media(min-width:1024px) {
+    .fingersCard.card{
+        width: 25rem !important;
+    }
+
     .card{
-        width: 15rem !important;
+        width: 15rem;
         border:10px;
         border: lightgrey solid 10px;
     }
-    .card:hover{
+  /*  .card:hover{
         width: 18rem !important;
         border: #450F93 solid 10px;
-    }
-    .centralSide .card{
+    }*/
+    /*.centralSide .card{
         width: 15rem !important;
-    }]
+    }
     .centralSide .card:hover{
         width: 15rem !important;
         border:none;
-}
+    }*/
+
 }
 
+
 @media(min-width:1367px){
+    .fingersCard .card :hover{
+        border:none !important;
+        width: 25rem !important;
+    }
     .card{
         width: 25rem !important;
         border: lightgrey solid 10px;
     }
-    .card:hover{
+   /* .card:hover{
         width: 30rem !important;
         border: #450F93 solid 20px;
-    }
-    .centralSide .card{
+    }*/
+/*    .centralSide .card{
         width: 25rem !important;
     }
     .centralSide .card:hover{
+        width: 30rem !important;
         border:lightgrey solid 10px;
-    }
+    }*/
 
 }

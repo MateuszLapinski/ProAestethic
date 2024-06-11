@@ -1,26 +1,34 @@
 import {Col, Row, Carousel} from "react-bootstrap";
-import Cards from "./Cards";
-import React from "react";
-import {FingerType, HandType, ProjectType} from "./Slides/Slides";
+import React,{useEffect, useState} from "react";
+import {EstethicType, FingerType, HandType, PhalanxType, ProjectType, Wymiary} from "./Slides/Slides";
 
 function CarouselComponent() {
+    const [currentStep, setCurrentStep] = useState('ProjectType');
+
+    const handleProjectTypeSelect = (title) => {
+        console.log('Title selected:', title);
+        if (title === 'Proteza') {
+            setCurrentStep('HandType');
+        } else if (title === 'Biżuteria') {
+            setCurrentStep('EstethicType');
+        } else if (title==='Lewa Ręka' || title === 'Prawa Ręka'){
+            setCurrentStep("FingerType")
+        }else if (title==='2' || title==='3' || title==='4' || title==='5'){
+            setCurrentStep("PhalanxType")
+        }
+    };
     return (
         <>
             <Row>
-                <h3 className="firstStepHeader">wybierz rodzaj projektu</h3>
-            </Row>
-            <Row>
-                <Carousel fade>
-                    <Carousel.Item>
-                        <ProjectType/>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <HandType/>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <FingerType/>
-                    </Carousel.Item>
-                </Carousel>
+                {currentStep === 'ProjectType' && <ProjectType onSelect={handleProjectTypeSelect} />}
+                {currentStep === 'HandType' && <HandType onSelect={handleProjectTypeSelect} />}
+                {currentStep === 'FingerType' && <FingerType onSelect={handleProjectTypeSelect}/>}
+                {currentStep === 'PhalanxType' && <PhalanxType />}
+                {/*{currentStep === 'Wymiary' && <Wymiary />}
+                {currentStep === 'EstethicType' && <EstethicType />}>*/}
+                <Wymiary />
+                <EstethicType />
+
             </Row>
 
         </>

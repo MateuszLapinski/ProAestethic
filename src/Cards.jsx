@@ -1,10 +1,13 @@
 import {Card} from "react-bootstrap";
 import PropTypes from "prop-types";
 
-export default function Cards({srcImage, title, onMouseMove,  onClick, isSelected}) {
+export default function Cards({srcImage, title, onMouseMove,  onClick, isSelected, kindOfType, className}) {
     return (
 
-        <Card className={`card ${isSelected ? 'selected' : ''}`} onMouseMove={onMouseMove} onClick={onClick}>
+        <Card
+            className={ `${className} ${kindOfType}`}
+            onMouseMove={onMouseMove}
+            onClick={onClick}>
             <Card.Img variant="top" src={srcImage}/>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
