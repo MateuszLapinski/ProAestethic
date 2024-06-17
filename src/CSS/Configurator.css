@@ -24,8 +24,12 @@
 .centralSide{
     display:flex;
     justify-content: center;
+    text-align: justify-all;
     align-items: center;
     height: 70vh;
+}
+.centralSide p{
+text-align: center;
 }
 
 .firstStepHeader {
@@ -34,14 +38,6 @@
     align-items: center;
     margin-top: 40px !important ;
     margin-bottom: 40px;
-}
-
-
-.pageNumber{
-    position:absolute;
-    left: 0;
-    bottom:0;
-    z-index:-1;
 }
 
 .pageNumber img{
@@ -93,6 +89,24 @@
     align-items: center;
     gap: 10px; /* Adjust the gap between elements as needed */
 }
+
+.ButtonsContainer{
+    position: fixed;
+    top:91%;
+
+}
+
+.AcceptButton{
+    background-color: #450F93 !important;
+    border-color:#450F93 !important;
+    position:fixed;
+    left:80%;
+}
+.returnButton{
+    position:fixed;
+    left:5%;
+}
+
 
 @media (max-width:1024px) {
     .rightSide{

@@ -5,7 +5,7 @@ export default function Cards({srcImage, title, onMouseMove,  onClick, isSelecte
     return (
 
         <Card
-            className={ `${className} ${kindOfType}`}
+            className={ `${className} ${kindOfType} ${isSelected ? 'active' : ''}`}
             onMouseMove={onMouseMove}
             onClick={onClick}>
             <Card.Img variant="top" src={srcImage}/>
